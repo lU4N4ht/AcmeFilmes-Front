@@ -1,0 +1,10 @@
+:root{
+    --red: #c54345;
+    --white: #FFFFFF;
+    --black: #1E1E1E;
+    --btn-bg: #E83338;
+    --gray: #444444;
+    --title-text: "Nunito", sans-serif;
+    --text-font:  "Josefin Sans", sans-serif;
+    --gradient:  linear-gradient(90deg, rgba(27, 27, 27, 0.897) 10%, rgba(255,255,255,0) 97%);
+}

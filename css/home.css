@@ -113,13 +113,17 @@ header{
 
 main{
     padding-top: 82px;
-    align-items: center;
-    justify-content: center;
+    gap: 8em;
     display: grid;
+    padding-inline: 72px;
+}
+.slide-container{
+    display: flex;
+    justify-content: center;
 }
 
 .slideshow{
-    background-image: url(https://i.pinimg.com/564x/30/64/eb/3064ebd2f9978b7f90cc7dfe26ad29cd.jpg);
+    background-image: url('../img/card-bg.jpg');
     width: 1175px;
     height: 583px;
     position: relative;
@@ -249,3 +253,38 @@ button {
    button:hover .button-text {
     color: #fff;
    }
+
+.filmes-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 67px;
+    cursor: pointer;
+}
+.card-filme{
+    width: 250px; 
+    height: 439px; 
+    background-color: var(--white);
+    box-shadow: 4px 4px 0px var(--black);
+    border: 1px var(--black) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 13px;
+}
+.filme-capa{
+    background-image: url(https://i.pinimg.com/564x/93/1a/b8/931ab8aa547a58c7c4b983536e7738c6.jpg);
+    width: 227px;
+    height: 331px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filme-nome{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 24px;
+    width: 216px; 
+}

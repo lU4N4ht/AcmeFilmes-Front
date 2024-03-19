@@ -1,6 +1,7 @@
 body{
     height: 100vh;
-    background-image: url(https://i.pinimg.com/originals/ab/3a/c5/ab3ac5842385b17af044f951091e10af.gif);
+    /* background-image: url(https://i.pinimg.com/originals/ab/3a/c5/ab3ac5842385b17af044f951091e10af.gif); */
+    background-color: black;
     display: grid;
     justify-content: center;
     align-items: center;

@@ -22,7 +22,7 @@
     justify-content: space-around;
     padding-block: 20px;
 }
-.show {
+#popup.show {
     display: block;
 }
 .popup-content h1{

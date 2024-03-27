@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/popup.css">
-    <script src="../js/popup.js" defer></script>
+    <script type="module" src="../js/popup.js" defer></script>
+    <script type="module" src="../js/home.js" defer></script>
+    <script type="module" src="../js/filme.js" defer></script>
     <title>Acme Filmes</title>
 </head>
 
@@ -60,90 +62,9 @@
                 </div>    
             </div>
            
-            <div class="filmes-container">
-                <div class="card-filme">
-                    <div class="filme-capa" id="card-filme"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-                <div class="card-filme">
-                    <div class="filme-capa"></div>
-                    <p class="filme-nome">A Quiet Place</p>
-                </div>
-            </div>
+            <div class="filmes-container" id="filmes-container"></div>
 
-            <div id="popup" class="popup">
-                <div class="popup-content">
-                    <div class="header">
-                        <div class="button" id="closePopup">X</div>
-                        <h1>A Quiet Place</h1>
-                    </div>
-                        <div class="info-filme">
-                            <div class="capa-filme"></div>
-                            <div class="content">
-                                <div class="info">
-                                    <h2>Nome:</h2>
-                                    <p>A Quiet Place</p>
-                                </div>
-                                <div class="info">
-                                    <h2>Sinopse:</h2>
-                                    <p>A family struggles for survival in a world where most humans have been killed by blind but noise-sensitive creatures.</p>
-                                </div>
-                                <div class="info">
-                                    <h2>Duração:</h2>
-                                    <p>1h 30m</p>
-                                </div>
-                                <div class="info">
-                                    <h2>Data de Lançamento:</h2>
-                                    <p>05-04-2018</p>
-                                </div>
-                                <div class="info">
-                                    <h2>Valor unitário:</h2>
-                                    <p>29.99</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
+            <div id="popup" class="popup"></div>
         </main>
     </div>
 </body>

@@ -123,7 +123,6 @@ main{
 }
 
 .slideshow{
-    background-image: url('../img/card-bg.jpg');
     width: 1175px;
     height: 583px;
     position: relative;

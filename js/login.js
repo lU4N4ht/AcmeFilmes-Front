@@ -15,7 +15,7 @@ async function loginValidation() {
         try {
             const response = await fetch(url);
             const usuarios = await response.json();
-            console.log(usuarios);
+            return usuarios          
         } catch (error) {
             alert('Houve um problema com a solicitação de login.');
             return null;
@@ -24,13 +24,17 @@ async function loginValidation() {
 
     const usuarios = await getUsers();
 
-    usuarios.forEach(function (user) {
-        if(user.email === inputEmail && user.senha === inputPassword) {
+    usuarios.usuario.forEach(function (user) {
+        if (user.email === inputEmail && user.senha === inputPassword) {
             userStatus = true;
-            localStorage.setItem('userId', user.id)
-            window.location.href = './pages/home.html';
+            localStorage.setItem('userId', user.id);
+            if (user.administrador === 1) {
+                window.location.href = './pages/cms.html';
+            } else {
+                window.location.href = './pages/home.html';
+            }
             return;
-        } 
+        }
     });
 
     if (!userStatus) {

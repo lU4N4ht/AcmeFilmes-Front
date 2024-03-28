@@ -1,0 +1,121 @@
+body{
+    background-color: var(--red);
+    font-family: var(--text-font);
+    height: auto;
+    display: grid;
+    justify-content: center;
+    padding-inline: 43px;
+    padding-block: 42px;
+}
+
+.body-container{
+    border-radius: 1em;
+    width: 114em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    box-shadow: 5px 0px 10px 2px rgba(80, 79, 79, 0.21);
+    padding-bottom: 80px;
+}
+
+.profile{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.foto-perfil{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mensagem-inicial{
+    color: var(--black);
+}
+
+.mensagem-inicial h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mensagem-inicial h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+header{
+    height: auto;
+    padding: 2.5em 4.75em 1em 3em;
+    gap: 3em;
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    font-family: var(--text-font);
+    align-items: center;
+}
+main{
+    padding-top: 82px;
+    gap: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 72px;
+}
+.container-filmes{
+    width: 1288px;
+    height: auto;
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    background-color: transparent;
+    padding-block: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+.card-filme{
+    width: 1233px;
+    height: 100px;
+    border: 1px solid var(--black);
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px 42px 10px 14px;
+    align-items: center;
+    gap: 20px;
+}
+.descricao-filme{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    /* width: 950px; */
+}
+.filme-capa{
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.controle{
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.editar-filme{
+    background-image: url('../img/lapis.png');
+}
+.deletar-filme{
+    background-image: url('../img/lixeira.png');
+}
+.nome-filme{
+    font-family: var(--text-font);
+    font-size: 32px;
+    font-weight: 400;
+}

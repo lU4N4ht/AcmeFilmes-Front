@@ -10,15 +10,10 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/root.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/popup.css">
-    <script type="module" src="../js/popup.js" defer></script>
-    <script type="module" src="../js/home.js" defer></script>
-    <script type="module" src="../js/filme.js" defer></script>
-    <script type="module" src="../js/slideshow.js"></script>
-    <script type="module" src="../js/profile.js"></script>
+        <link rel="stylesheet" href="../css/root.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/perfil.css">
+        <script type="module" src="../js/perfil.js"></script>
     <title>Acme Filmes</title>
 </head>
 
@@ -37,15 +32,13 @@
                 </div>
             </ul>
         </header>
+        <div class="perfil">
+            <div class="foto_area">
+                <div class="foto" id="foto"></div>
+            </div>
+            <h1 class="nome-usuario" id="nome-usuario"></h1>
 
-        <main>
-            <div class="slide-container" id="slide-container"></div>
-           
-            <div class="filmes-container" id="filmes-container"></div>
-
-            <div id="popup" class="popup"></div>
-        </main>
+        </div>
     </div>
 </body>
-
 </html>

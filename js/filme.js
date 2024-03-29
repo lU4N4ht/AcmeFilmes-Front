@@ -19,7 +19,7 @@ export async function getFilme(id){
 }
 
 export async function postFilme (filme) {
-    const url = 'http://localhost/v2/acmefilmes/filme' 
+    const url = 'https://acmefilmes.onrender.com//v2/acmefilmes/filme' 
     const options = {
         method: 'POST',
         headers: {

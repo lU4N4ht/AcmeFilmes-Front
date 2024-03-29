@@ -3,7 +3,7 @@
 import { getFilmes } from "./filme.js";
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const container = document.getElementById('filmes-container');
+    const container = document.getElementById('slide-container');
     const filmes = await getFilmes();
     const slides = preencherSlideShow(container, filmes);
     iniciarSlideShow(slides);
@@ -41,6 +41,10 @@ function preencherSlideShow(container, filmes) {
         circleSpan.appendChild(arrowSpan);
         learnMoreButton.appendChild(buttonTextSpan);
 
+        learnMoreButton.addEventListener('click', () => {
+            window.location.href = '../pages/filmes.html'; // Redirecionamento ao clicar
+        });
+
         slideshow.appendChild(nomeFilme);
         slideshow.appendChild(descricaoFilme);
         slideshow.appendChild(learnMoreButton);
@@ -59,13 +63,12 @@ function iniciarSlideShow(slides) {
     setInterval(() => {
         slides.forEach((slide, index) => {
             if (index === indice) {
-                slide.style.display = 'block';
+                slide.style.display = 'flex';
             } else {
                 slide.style.display = 'none';
             }
         });
 
         indice = (indice + 1) % slides.length;
-    }, 3000); 
+    }, 5000); 
 }
-

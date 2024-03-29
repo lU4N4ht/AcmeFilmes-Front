@@ -53,6 +53,7 @@ input {
     color: var(--black);
     outline: 0;
     font-size: 20px;
+    width: 800px;
 }
 .deco-container{
     display: flex;

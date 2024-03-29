@@ -16,27 +16,25 @@
     <link rel="stylesheet" href="../css/cms.css">
     <script type="module" src="../js/popup.js" defer></script>
     <script type="module" src="../js/cms.js" defer></script>
+    <script type="module" src="../js/profile.js" defer></script>
     <title>Acme Filmes</title>
 </head>
 
 <body>
     <div class="body-container">
         <header>
-            <div class="profile">
-                <img src="../img/pessoa.png" alt="foto-perfil" class="foto-perfil">
-                <div class="mensagem-inicial">
-                    <h1>Bem-vindo,</h1>
-                    <h2 id="home-name">Roberta M.</h2>
-                </div>
-            </div>
+            <div class="profile" id="profile"></div>
         </header>
 
         <main>
             <div class="container-filmes" id="filmes-container"></div>
 
-
             <div id="popup" class="popup"></div>
         </main>
+        <div class="btn-container">
+            <button class="btn" id="btn">ADICIONAR NOVO FILME</button>
+        </div>
+        
     </div>
 </body>
 

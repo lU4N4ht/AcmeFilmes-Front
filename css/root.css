@@ -7,4 +7,5 @@
     --title-text: "Nunito", sans-serif;
     --text-font:  "Josefin Sans", sans-serif;
     --gradient:  linear-gradient(90deg, rgba(27, 27, 27, 0.897) 10%, rgba(255,255,255,0) 97%);
+    --green: #065535;
 }

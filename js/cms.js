@@ -1,11 +1,22 @@
 'use strict';
 
-import { getFilmes, getFilme } from "./filme.js";
+import { getFilmes} from "./filme.js";
 
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('filmes-container');
 
     preencherCards(container);
+
+    document.querySelectorAll('.editar-filme').forEach(controleEditar => {
+        controleEditar.addEventListener('click', function () {
+            window.location.href = '../pages/addFilme.html';
+        });
+    });
+
+    const botaoAdd = document.getElementById('btn');
+    botaoAdd.addEventListener('click', function () {
+        window.location.href = '../pages/addFilme.html';
+    });
 });
 
 async function preencherCards(container) {
@@ -26,32 +37,19 @@ async function preencherCards(container) {
         nomeFilme.classList.add('nome-filme');
         nomeFilme.textContent = filme.nome;
 
-        let controleEditar = document.createElement('div');
-        controleEditar.classList.add('controle', 'editar-filme');
-        let editarIcone = document.createElement('img');
-        editarIcone.src = '../img/lapis.png'; 
-        controleEditar.appendChild(editarIcone);
-
-        let controleDeletar = document.createElement('div');
-        controleDeletar.classList.add('controle', 'deletar-filme');
-        let deletarIcone = document.createElement('img');
-        deletarIcone.src = '../img/lixeira.png'; 
-        controleDeletar.appendChild(deletarIcone);
-    
-
         descricaoFilme.appendChild(filmeCapa);
         descricaoFilme.appendChild(nomeFilme);
 
         cardFilme.appendChild(descricaoFilme);
-        cardFilme.appendChild(controleEditar);
-        cardFilme.appendChild(controleDeletar);
-         
+
+        cardFilme.dataset.id = filme.id; 
+
         container.appendChild(cardFilme);
 
-        cardFilme.addEventListener('click', async () => {
-            const filmeId = cardFilme.dataset.id;
-            const filme = await getFilme(filmeId);
-            exibirPopup(filme);
+        cardFilme.addEventListener('click', function() {
+            const filmeId = filme.id;
+            localStorage.setItem('filmeId', filmeId);
+            window.location.href = '../pages/editarFilme.html';
         });
     });
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/editarFilme.css">
+    <script type="module" src="../js/profile.js" defer></script>
+    <script type="module" src="../js/editarFilme.js" defer></script>
+    <title>Acme Filmes</title>
+</head>
+
+<body>
+    <div class="body-container">
+        <header>
+            <div class="profile" id="profile"></div>
+        </header>
+        <main>
+            <div class="access">
+                <div class="info-area">
+                    <p>Nome:</p>
+                    <div class="input-info">
+                        <input type="text" id="nome">
+                    </div>
+                </div>
+
+                <div class="info-area">
+                    <p>Sinopse:</p>
+                    <div class="input-info">
+                        <input type="text" id="sinopse">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Foto da Capa (url):</p>
+                    <div class="input-info">
+                        <input type="text" id="foto_capa">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Foto do Poster (url):</p>
+                    <div class="input-info">
+                        <input type="text" id="foto_poster">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Data de Lançamento:</p>
+                    <div class="input-info">
+                        <input type="date" id="data_lancamento">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Data de Relançamento:</p>
+                    <div class="input-info">
+                        <input type="date" id="data_relancamento">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Duração:</p>
+                    <div class="input-info">
+                        <input type="time" id="duracao">
+                    </div>
+                </div>
+                <div class="info-area">
+                    <p>Valor Unitário:</p>
+                    <div class="input-info">
+                        <input type="text" id="valor_unitario">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="btn-container">
+            <button class="btn confirmar" id="btn">CONFIRMAR</button>
+            <button class="btn deletar" id="btn-deletar">DELETAR</button>
+        </div>
+    </div>
+</body>
+
+</html>

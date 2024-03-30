@@ -5,6 +5,24 @@ const adicionarBotao = document.getElementById('btn');
 
 adicionarBotao.addEventListener('click', enviarDados);
 
+function formatarData(dataString) {
+    const data = new Date(dataString);
+    const dia = data.getDate().toString().padStart(2, '0');
+    const mes = (data.getMonth() + 1).toString().padStart(2, '0');
+    const ano = data.getFullYear();
+
+    return `${ano}-${mes}-${dia}`;
+}
+
+function formatarTempo(tempoString) {
+    const [horas, minutos] = tempoString.split(':');
+    return `${horas.padStart(2, '0')}:${minutos.padStart(2, '0')}:00`;
+}
+
+function formatarValor(valor) {
+    return parseFloat(valor).toFixed(2);
+}
+
 async function enviarDados() {
     const inputNome = document.getElementById('nome').value;
     const inputSinopse = document.getElementById('sinopse').value;
@@ -16,13 +34,13 @@ async function enviarDados() {
     const inputValorUnitario = document.getElementById('valor_unitario').value;
 
     if (
-        inputNome === '' ||
-        inputSinopse === '' ||
-        inputFotoCapa === '' ||
-        inputFotoPoster === '' ||
-        inputDataLancamento === '' ||
-        inputDuracao === '' ||
-        inputValorUnitario === ''
+        inputNome == '' ||
+        inputSinopse == '' ||
+        inputFotoCapa == '' ||
+        inputFotoPoster == '' ||
+        inputDataLancamento == '' ||
+        inputDuracao == '' ||
+        inputValorUnitario == ''
     ) {
         alert('ERRO: Não é possível enviar, dados obrigatórios');
     } else {
@@ -30,11 +48,11 @@ async function enviarDados() {
             const filme = {
                 nome: inputNome,
                 sinopse: inputSinopse,
-                duracao: converterDuracaoParaMinutos(inputDuracao),
+                duracao: formatarTempo(inputDuracao),
                 data_lancamento: formatarData(inputDataLancamento),
-                data_relancamento: formatarData(inputDataRelancamento),
+                data_relancamento: inputDataRelancamento ? formatarData(inputDataRelancamento) : null,
                 foto_capa: inputFotoCapa,
-                valor_unitario: inputValorUnitario,
+                valor_unitario: formatarValor(inputValorUnitario),
                 foto_poster: inputFotoPoster,
             };
 
@@ -51,15 +69,4 @@ async function enviarDados() {
     }
 }
 
-function converterDuracaoParaMinutos(duracao) {
-    const [horas, minutos] = duracao.split(':');
-    const horasEmMinutos = parseInt(horas, 10) * 60;
-    const minutosInt = parseInt(minutos, 10);
-    return horasEmMinutos + minutosInt;
-}
-
-function formatarData(dataString) {
-    const data = new Date(dataString);
-    return data.toISOString().split('T')[0];
-}
 

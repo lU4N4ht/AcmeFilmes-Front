@@ -19,7 +19,7 @@ export async function getFilme(id){
 }
 
 export async function postFilme (filme) {
-    const url = 'https://acmefilmes.onrender.com//v2/acmefilmes/filme' 
+    const url = 'https://acmefilmes.onrender.com/v2/acmefilmes/filme' 
     const options = {
         method: 'POST',
         headers: {
@@ -33,4 +33,4 @@ export async function postFilme (filme) {
 
     return response.ok
 
-}
+}   

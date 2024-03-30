@@ -59,7 +59,7 @@ async function enviarDados() {
             const response = await postFilme(filme);
             if (response) {
                 alert('Dados enviados com sucesso!');
-                window.location.reload();
+                window.location.href = '../pages/cms.html';
             } else {
                 alert('Erro ao enviar os dados');
             }

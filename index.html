@@ -12,33 +12,50 @@
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/button.css">
     <script src="./js/login.js" defer></script>
+    <script src="./js/loginTransition.js" defer></script>
     <title>Acme Filmes</title>
 </head>
 
 <body>
-    <main>
-        <div class="logo">
-            <img src="./img/logo.png" alt="logo" width="280px">
+    <main class="container" id="container">
+          <div class="form-container sign-up">
+            <form>
+                <h1>Crie uma conta!</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Cadastrar</button>
+            </form>
         </div>
-        <div class="access">
-            <p>Email:</p>
-            <div class="input-info">
-                <input type="text" id="email">
-                <img src="./img/email.png" alt="Email icon">
+
+        <div class="form-container sign-in">
+            <form>
+                <div class="login-message">
+                    <h1 class="title">Acesse a sua conta</h1>
+                    <h2 class="title">e assista seus filmes favoritos!</h2>
+                </div>
+                <input type="email" placeholder="Insira seu e-mail" id="email">
+                <input type="password" placeholder="Insira sua senha" id="password">
+
+                <button id="btn">Acessar</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Já tem uma conta?</h1>
+                    <p>Entre na página de login e acesse sua conta!</p>
+                    <div class="image"></div>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>Seja Bem-vindo(a)!</h1>
+                    <p>Ainda não possui uma conta? Cadastre-se aqui!</p>
+                    <div class="image"></div>
+                    <button class="btn hidden" id="register">Cadastre-se</button>
+                </div>
             </div>
-            <p>Senha:</p>
-            <div class="input-info">
-                <input type="password" id="password">
-                <img src="./img/senha.png" alt="Password icon">
-            </div>
-        </div>
-        <div class="deco-container">
-            <div class="elipse"></div>
-            <div class="linha"></div>
-            <div class="elipse"></div>
-        </div>
-        <div class="btn-container">
-            <button class="btn" id="btn">ENTRAR</button>
         </div>
     </main>
 </body>

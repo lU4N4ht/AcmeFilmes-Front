@@ -2,10 +2,11 @@
     --red: #c54345;
     --white: #FFFFFF;
     --black: #1E1E1E;
-    --btn-bg: #E83338;
+    --btn-bg: #a02328;
     --gray: #444444;
     --title-text: "Nunito", sans-serif;
     --text-font:  "Josefin Sans", sans-serif;
     --gradient:  linear-gradient(90deg, rgba(27, 27, 27, 0.897) 10%, rgba(255,255,255,0) 97%);
     --green: #065535;
+    --bg-gradient: linear-gradient(90deg, rgba(15,15,15,1) 13%, rgba(197,67,69,1) 100%);
 }

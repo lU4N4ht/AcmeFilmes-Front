@@ -13,7 +13,7 @@ function preencherSlideShow(container, filmes) {
     const slides = filmes.map(filme => {
         const slideshow = document.createElement('div');
         slideshow.classList.add('slideshow');
-        slideshow.style.backgroundImage = `url(${filme.foto_capa})`;
+        slideshow.style.backgroundImage = `url(${filme.foto_poster})`;
 
         const nomeFilme = document.createElement('h1');
         nomeFilme.classList.add('nome-filme');

@@ -7,7 +7,7 @@ window.onload = async function loadProfile(){
     const user = await urlUser.json();
 
   
-        user.filme.forEach(user => {
+        user.usuario.forEach(user => {
             const container = document.getElementById('profile');
 
             const profilePic = document.createElement('img');

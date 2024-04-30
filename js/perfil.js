@@ -7,13 +7,8 @@ window.onload = async function loadProfile(){
     const user = await urlUser.json();
 
   
-        user.filme.forEach(user => {
-            const fotoPerfil = document.getElementById('foto');
-            fotoPerfil.style.backgroundImage = `url(${user.foto_url})`
-
-            const nomeUsuario = document.getElementById('nome-usuario');
-            nomeUsuario.textContent = user.nome;
-
+        user.usuario.forEach(user => {
+        
             const container = document.getElementById('profile');
 
             const profilePic = document.createElement('img');
@@ -32,6 +27,13 @@ window.onload = async function loadProfile(){
             profileName.id = 'home-name';
             profileName.textContent = user.nome;
             mensagemInicial.appendChild(profileName);
+
+            const password = document.getElementById('password')
+            password.value = user.senha
+            const email = document.getElementById('email')
+            email.value = user.email
+            const name = document.getElementById('username')
+            name.value = user.nome
 
             container.appendChild(mensagemInicial);
         });

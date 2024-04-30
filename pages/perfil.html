@@ -10,10 +10,10 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="../css/root.css">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/perfil.css">
-        <script type="module" src="../js/perfil.js"></script>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <script type="module" src="../js/perfil.js"></script>
     <title>Acme Filmes</title>
 </head>
 
@@ -32,13 +32,34 @@
                 </div>
             </ul>
         </header>
-        <div class="perfil">
-            <div class="foto_area">
-                <div class="foto" id="foto"></div>
-            </div>
-            <h1 class="nome-usuario" id="nome-usuario"></h1>
 
-        </div>
+        <main>
+
+            <div class="profile-info">
+                <div class="profile-box">
+                    <span class="profile-title">Nome de Usuario</span>
+                    <input type="text" class="username" id="username">
+                </div>
+
+                <div class="profile-box">
+                    <span class="profile-title">Email</span>
+                    <input type="text" class="email" id="email">
+                </div>
+
+                <div class="profile-box">
+                    <span class="profile-title">Senha</span>
+                    <input type="text" class="password" id="password">
+                </div>
+                <div class="update-button">
+                    <button class="btn apply" id="apply-button">Aplicar Alterações</button>
+                </div>
+            </div>
+
+            <div class="button-area">
+                <button class="btn delete" id="addButton">Deletar Conta</button>
+            </div>
+        </main>
     </div>
 </body>
+
 </html>

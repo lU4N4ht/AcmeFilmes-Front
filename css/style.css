@@ -7,6 +7,7 @@ body {
     background: linear-gradient(-45deg, #030000, #8c1f21, #c54345, #ffa08f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    font-family: var(--text-font);
 }
 
 @keyframes gradient {
@@ -21,6 +22,7 @@ body {
     }
 }
 
+
 .container{
     background-color: var(--white);
     border-radius: 30px;
@@ -31,16 +33,7 @@ body {
     height: 60em;
 }
 
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-    font-family: var(--text-font);
-    color: var(--white);
-}
-
-.container button{
+.container .move{
     background-color: var(--btn-bg);
     color: var(--white);
     font-size: 12px;
@@ -68,7 +61,7 @@ body {
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
-    gap: 15px;
+    gap: 40px;
 }
 
 .container input{
@@ -171,10 +164,14 @@ body {
     top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
+    background-image: url(../img/bg_start.png);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .toggle-left{
     transform: translateX(-200%);
+    background-position: bottom left;
 }
 
 .container.active .toggle-left{
@@ -184,16 +181,30 @@ body {
 .toggle-right{
     right: 0;
     transform: translateX(0);
+    background-position: bottom right;
 }
 
 .container.active .toggle-right{
     transform: translateX(200%);
 }
-.image{
-    background-image: url(../img/login_bg.png);
-    height: 200px;
-    width: 200px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.login-message h1{
+    color: var(--btn-bg);
+    font-family: var(--title-text);
+    font-size: 32px;
+    font-weight: 900;
+}
+.login-message h2{
+    color: var(--black);
+    font-size: 26px;
+}
+.toggle-panel h1{
+    font-family: var(--title-text);
+    font-size: 48px;
+    font-weight: 900;
+}
+form h1{
+    color: var(--btn-bg);
+    font-family: var(--title-text);
+    font-size: 32px;
+    font-weight: 900;
 }

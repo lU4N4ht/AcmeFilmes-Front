@@ -7,23 +7,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/jpg" href="https://cdn-icons-png.flaticon.com/128/705/705062.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/button.css">
     <script src="./js/login.js" defer></script>
     <script src="./js/loginTransition.js" defer></script>
+    <script src="./js/cadastro.js" defer></script>
     <title>Acme Filmes</title>
 </head>
 
 <body>
     <main class="container" id="container">
-          <div class="form-container sign-up">
+        <div class="form-container sign-up">
             <form>
                 <h1>Crie uma conta!</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Cadastrar</button>
+                <input type="text" placeholder="Nome" id="nome-cadastro">
+                <input type="email" placeholder="Email" id="email-cadastro">
+                <input type="password" placeholder="Senha" id="senha-cadastro">
+                <button class="botao" id="cadastro">Cadastrar</button>
             </form>
         </div>
 
@@ -36,7 +42,7 @@
                 <input type="email" placeholder="Insira seu e-mail" id="email">
                 <input type="password" placeholder="Insira sua senha" id="password">
 
-                <button id="btn">Acessar</button>
+                <button class="botao" id="btn">Acessar</button>
             </form>
         </div>
 
@@ -45,15 +51,13 @@
                 <div class="toggle-panel toggle-left">
                     <h1>Já tem uma conta?</h1>
                     <p>Entre na página de login e acesse sua conta!</p>
-                    <div class="image"></div>
-                    <button class="hidden" id="login">Login</button>
+                    <button class="hidden move" id="login">Login</button>
                 </div>
 
                 <div class="toggle-panel toggle-right">
                     <h1>Seja Bem-vindo(a)!</h1>
                     <p>Ainda não possui uma conta? Cadastre-se aqui!</p>
-                    <div class="image"></div>
-                    <button class="btn hidden" id="register">Cadastre-se</button>
+                    <button class="btn hidden move" id="register">Cadastre-se</button>
                 </div>
             </div>
         </div>

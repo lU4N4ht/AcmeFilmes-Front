@@ -29,9 +29,9 @@ async function loginValidation() {
             userStatus = true;
             localStorage.setItem('userId', user.id);
             if (user.administrador === 1) {
-                window.location.href = './pages/cms.html';
+                window.location.href = '../pages/cms.html';
             } else {
-                window.location.href = './pages/home.html';
+                window.location.href = '../pages/home.html';
             }
             return;
         }

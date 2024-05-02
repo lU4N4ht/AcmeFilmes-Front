@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Filmes | Categorias</title>
-    <link rel="icon" type="image/jpg"
-        href="https://www.freeiconspng.com/thumbs/sports-icon-png/sports-football-icon-4.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="date.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,800;1,100&family=Oswald:wght@200;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script type="module" src="../js/popup.js" defer></script>
+    <script type="module" src="../js/generoDropdown.js" defer></script>
+    <script type="module" src="../js/cardsGenero.js" defer></script>
+    <script type="module" src="../js/filme.js" defer></script>
+    <script type="module" src="../js/profile.js" defer></script>
+    <title>Acme Filmes | Filmes</title>
 </head>
+
 <body>
-    <div>
-        <h1>Feature em Andamento!</h1>
-    </div>
-    <div> 
-        <img src="https://raw.githubusercontent.com/lU4N4ht/InterclassesPropaganda/main/img/emAndamento.webp" alt="emAndamento">
+    <div class="body-container">
+        <header>
+            <div class="profile" id="profile"></div>
+
+            <ul class="navbar">
+                <a href="./filmes.html">Filmes</a>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle btn-custom" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Gêneros
+                    </button>
+                    <div class="dropdown-menu"></div>
+                </div>
+                <a href="./perfil.html">Perfil</a>
+                <div class="input-info">
+                    <img src="../img/lupa.png" alt="lupa">
+                    <input type="text" placeholder="Buscar...">
+                </div>
+            </ul>
+        </header>
+
+        <main>
+            <div class="filmes-container" id="filmes-container"></div>
+
+            <div id="popup" class="popup"></div>
+        </main>
     </div>
 </body>
+
 </html>

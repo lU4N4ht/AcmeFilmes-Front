@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/popup.css">
@@ -18,6 +19,7 @@
     <script type="module" src="../js/home.js" defer></script>
     <script type="module" src="../js/filme.js" defer></script>
     <script type="module" src="../js/profile.js" defer></script>
+    <script type="module" src="../js/generoDropdown.js"></script>
     <title>Acme Filmes | Filmes</title>
 </head>
 
@@ -27,8 +29,14 @@
             <div class="profile" id="profile"></div>
 
             <ul class="navbar">
-                <a href="./home.html">Home</a>
-                <a href="./categorias.html">Categorias</a>
+                <a href="./filmes.html">Filmes</a>
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle btn-custom" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Gêneros
+                    </button>
+                    <div class="dropdown-menu"></div>
+                </div>
                 <a href="./perfil.html">Perfil</a>
                 <div class="input-info">
                     <img src="../img/lupa.png" alt="lupa">

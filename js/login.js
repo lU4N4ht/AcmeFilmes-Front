@@ -1,45 +1,43 @@
 'use strict'
 
-const btnLogin = document.getElementById('btn');
+const url = 'https://acmefilmes.onrender.com/v2/acmefilmes/usuarios/';
 
-async function loginValidation() {
-   
+const getUsers = async () => {
+    try {
+        const response = await fetch(url);
+        const usuarios = await response.json();
+        return usuarios;
+    } catch (error) {
+        alert('Houve um problema com a solicitação de login.');
+        return null;
+    }
+};
+
+document.getElementById('btn').addEventListener('click', async function() {
+
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
 
-    let userStatus = false; 
+    try {
+        const usuarios = await getUsers();
 
-    const getUsers = async () => {
-        const url = 'https://acmefilmes.onrender.com/v2/acmefilmes/usuarios/';
-
-        try {
-            const response = await fetch(url);
-            const usuarios = await response.json();
-            return usuarios          
-        } catch (error) {
-            alert('Houve um problema com a solicitação de login.');
-            return null;
+        if (!usuarios) {
+            return; 
         }
-    };
 
-    const usuarios = await getUsers();
-
-    usuarios.usuario.forEach(function (user) {
-        if (user.email === inputEmail && user.senha === inputPassword) {
-            userStatus = true;
-            localStorage.setItem('userId', user.id);
-            if (user.administrador === 1) {
+        const usuario = usuarios.usuario.find(user => user.email === inputEmail && user.senha === inputPassword);
+        if (usuario) {
+            localStorage.setItem('userId', usuario.id);
+            if (usuario.administrador === 1) {
                 window.location.href = '../pages/cms.html';
             } else {
                 window.location.href = '../pages/home.html';
             }
-            return;
+        } else {
+            alert('Credenciais inválidas. Tente novamente.');
         }
-    });
-
-    if (!userStatus) {
-        alert('Credenciais inválidas. Tente novamente.');
+    } catch (error) {
+        alert('Ocorreu um erro ao processar sua solicitação. Por favor, tente novamente mais tarde.');
     }
-}
+});
 
-btnLogin.addEventListener('click', loginValidation);

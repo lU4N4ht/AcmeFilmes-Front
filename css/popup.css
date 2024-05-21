@@ -92,3 +92,9 @@
     justify-content: baseline;
     gap: 550px;
 }
+
+.endContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -3,7 +3,7 @@
 const userId = localStorage.getItem('userId');
 
 window.onload = async function loadProfile(){
-    const urlUser = await fetch(`https://acmefilmes.onrender.com/v2/acmefilmes/usuario/${userId}`);
+    const urlUser = await fetch(`https://acmefilmes.onrender.com/v2/acmefilmes/usuario/${2}`);
     const user = await urlUser.json();
 
   

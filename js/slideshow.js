@@ -42,7 +42,7 @@ function preencherSlideShow(container, filmes) {
         learnMoreButton.appendChild(buttonTextSpan);
 
         learnMoreButton.addEventListener('click', () => {
-            window.location.href = '../pages/filmes.html'; // Redirecionamento ao clicar
+            window.location.href = '../pages/filmes.html';
         });
 
         slideshow.appendChild(nomeFilme);

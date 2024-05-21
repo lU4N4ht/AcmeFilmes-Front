@@ -1,0 +1,28 @@
+/* .card{
+    width: 162px;
+    height: 162px;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.classificacao-foto{
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2022/02/L-AUTO.jpg');
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card:hover{
+    border: 2px solid var(--red);
+} */

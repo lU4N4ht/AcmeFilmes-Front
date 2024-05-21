@@ -1,43 +1,47 @@
 'use strict'
+const btnLogin = document.getElementById('btn');
 
-const url = 'https://acmefilmes.onrender.com/v2/acmefilmes/usuarios/';
-
-const getUsers = async () => {
-    try {
-        const response = await fetch(url);
-        const usuarios = await response.json();
-        return usuarios;
-    } catch (error) {
-        alert('Houve um problema com a solicitação de login.');
-        return null;
-    }
-};
-
-document.getElementById('btn').addEventListener('click', async function() {
-
+async function loginValidation() {
+   
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
 
-    try {
-        const usuarios = await getUsers();
+    let userStatus = false; 
 
-        if (!usuarios) {
-            return; 
+    const getUsers = async () => {
+        const url = 'https://acmefilmes.onrender.com/v2/acmefilmes/usuarios/';
+        try {
+            const response = await fetch(url);
+            const usuarios = await response.json();
+            return usuarios;
+        } catch (error) {
+            alert('Houve um problema com a solicitação de login.');
+            return null;
         }
+    };
 
-        const usuario = usuarios.usuario.find(user => user.email === inputEmail && user.senha === inputPassword);
-        if (usuario) {
-            localStorage.setItem('userId', usuario.id);
-            if (usuario.administrador === 1) {
-                window.location.href = '../pages/cms.html';
+    const usuarios = await getUsers();
+
+    usuarios.forEach(function (user) {
+
+        if(user.email === inputEmail && user.senha === inputPassword) {
+            userStatus = true;
+            if (user) {
+                localStorage.setItem('userId', user.id);
+                if (user.administrador === 1) {
+                    window.location.href = '../pages/cms.html';
+                } else {
+                    window.location.href = '../pages/home.html';
+                }
             } else {
-                window.location.href = '../pages/home.html';
+                alert('Credenciais inválidas. Tente novamente.');
             }
-        } else {
-            alert('Credenciais inválidas. Tente novamente.');
-        }
-    } catch (error) {
-        alert('Ocorreu um erro ao processar sua solicitação. Por favor, tente novamente mais tarde.');
-    }
-});
+        } 
+    });
 
+    if (!userStatus) {
+        alert('Credenciais inválidas. Tente novamente.');
+    }
+}
+
+btnLogin.addEventListener('click', loginValidation);

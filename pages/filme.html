@@ -28,8 +28,7 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/popup.css">
-    <script type="module" src="../js/popup.js" defer></script>
-    <script type="module" src="../js/home.js" defer></script>
+    <link rel="stylesheet" href="../css/filme.css">
     <script type="module" src="../js/filme.js" defer></script>
     <script type="module" src="../js/profile.js" defer></script>
     <script type="module" src="../js/generoDropdown.js"></script>
@@ -42,7 +41,7 @@
             <div class="profile" id="profile"></div>
 
             <ul class="navbar">
-                <a href="./home.html">Home</a>
+                <a href="./filmes.html">Filmes</a>
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle btn-custom" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -59,9 +58,35 @@
         </header>
 
         <main>
-            <div class="filmes-container" id="filmes-container"></div>
+            <div class="filme-card">
+                <div class="filme-nome">
+                    Matrix
+                </div>
+                <div class="filme-poster"></div>
+                <div class="filme-sinopse"> Um programador é levado por rebeldes a um combate interminável contra seres que controlam a realidade de toda a humanidade, o que o faz questionar a própria realidade. </div>
+            </div>
 
-            <div id="popup" class="popup"></div>
+
+            <div class="filme-duracao-data">
+                <div class="duracao">
+                    <div class="titulo">Duração</div>
+                    <div class="conteudo">02:35:00</div>
+                </div>
+                <div class="data">
+                    <div class="titulo">Data de lançamento: </div>
+                    <div class="conteudo">2000-05-05</div>
+                </div>
+            </div>
+            <div class="elenco-direcao">
+                <h1 class="title">Elenco:</h1>
+                <div class="picture"></div>
+                <h1 class="title">Direção:</h1>
+                <div class="picture"></div>
+            </div>
+            <div class="button-area">
+                <button>29.99</button>
+            </div>
+            
         </main>
     </div>
 </body>

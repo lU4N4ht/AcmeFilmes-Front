@@ -1,0 +1,26 @@
+.filme-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+.filme-nome{
+    color: var(--red);
+    font-family: var(--title-text);
+    font-weight: 900;
+    font-size: 36px;
+}
+.filme-poster{
+    background-image: url('https://ogimg.infoglobo.com.br/rioshow/24118715-847-afa/FT1086A/760/matrix.jpg');
+    width: 1056px;
+    height: 507px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.filme-sinopse{
+    width: 1556px;
+    font-family: var(--text-font);
+    font-size: 24px;
+    text-align: justify;
+}

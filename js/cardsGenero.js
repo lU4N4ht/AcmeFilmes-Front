@@ -1,14 +1,22 @@
 'use strict'
 
-async function preencherCardsGenero(container, genero) {
-    const filmesGenero = await getFilmeGenero(genero);
+async function preencherCardsGenero() {
+    const nomeGenero = localStorage.getItem('generoNome');
+    if (!nomeGenero) {
+        console.error('Genero não encontrado no localStorage');
+        return;
+    }
 
+    const filmesGenero = await getFilmeGenero(nomeGenero);
+    console.log('Filmes:', filmesGenero);
+
+    const container = document.getElementById('filmes-container');
     container.innerHTML = '';
 
     filmesGenero.forEach(filme => {
         let cardFilme = document.createElement('div');
         cardFilme.classList.add('card-filme');
-        cardFilme.dataset.id = filme.id; 
+        cardFilme.dataset.id = filme.id;
 
         let filmeCapa = document.createElement('div');
         filmeCapa.classList.add('filme-capa');
@@ -32,12 +40,20 @@ async function preencherCardsGenero(container, genero) {
 }
 
 async function getFilmeGenero(nomeGenero){
-    const url = `https://acmefilmes.onrender.com/v2/acmefilmes/filtro/filme/genero?genero=${nomeGenero}`
-    const respose = await fetch(url)
-    const data = await respose.json()
-    if (data.filme && data.filme.length > 0) {
-        return data.filme;
-    } else {
-        throw new Error('Filmes não encontrados');
+    const url = `https://acmefilmes.onrender.com/v2/acmefilmes/filtro/filme/genero?genero=${nomeGenero}`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.filme && data.filme.length > 0) {
+            return data.filme;
+        } else {
+            console.log('Filmes não encontrados');
+            return [];
+        }
+    } catch (error) {
+        console.error('Erro ao buscar filmes:', error);
+        return [];
     }
 }
+
+preencherCardsGenero();
